@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<html>
+<head> 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
+
+    <!-- css local -->
+    <link rel="stylesheet" href="{% static 'css/FEP.css' %}">
+
+</head>
+<body>
+    <div align="center">
+       <a id="aLogo" href="{% url 'home' %}"><img src="http://presskit.paramopresenta.com/images/Recurso 1-8.png" id="logo"/></a> 
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'deportes' %}">Deportes tropicales de invierno</a>
+        <a href="{% url 'entretenimiento' %}">Entretenimiento para robots</a>
+        <a href="{% url 'orden' %}">Orden Público Alterado</a>
+        <a href="{% url 'chibchombia' %}">Chibchombia</a>
+        <a href="{% url 'negocios' %}">Negocios ociosos</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div> 
+    {% block content %}
+    {% endblock %}
+    <script type="text/javascript">
+        function myFunction() 
+        {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } 
+            else 
+            {
+                x.className = "topnav";
+            }
+        } 
+    </script>
+</body>
+</html>

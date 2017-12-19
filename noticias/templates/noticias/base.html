@@ -14,23 +14,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
 
     <!-- css local -->
-    <link rel="stylesheet" href="{% static 'css/FEP.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/FEP.css' %}"> 
 </head>
 <body>
     <div align="center">
        <a id="aLogo" href="{% url 'home' %}"><img src="http://presskit.paramopresenta.com/images/Recurso 1-8.png" id="logo"/></a> 
     </div>
-    <div class="topnav" id="myTopnav">
-        <a href="{% url 'deportes' %}">Deportes tropicales de invierno</a>
-        <a href="{% url 'entretenimiento' %}">Entretenimiento para robots</a>
-        <a href="{% url 'orden' %}">Orden Público Alterado</a>
-        <a href="{% url 'chibchombia' %}">Chibchombia</a>
-        <a href="{% url 'negocios' %}">Negocios ociosos</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div> 
+    {% block navbar %}
+    	<nav class="topnav sticky-top" id="myTopnav">
+        	<a href="{% url 'deportes' %}">Deportes tropicales de invierno</a>
+        	<a href="{% url 'entretenimiento' %}">Entretenimiento para robots</a>
+        	<a href="{% url 'orden' %}">Orden Público Alterado</a>
+        	<a href="{% url 'chibchombia' %}">Chibchombia</a>
+        	<a href="{% url 'negocios' %}">Negocios ociosos</a>
+        	<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    	</nav> 
+    {% endblock %}
     {% block content %}
     {% endblock %}
+    {% block boton %}
+    	<a href="{% url 'noticia_new' %}" class="top-menu">nueva noticia</a>
+   	{% endblock %}
     <script type="text/javascript">
         function myFunction() 
         {

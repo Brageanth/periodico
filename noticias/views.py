@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Noticia
+from .forms import Noticia_Form
 # Create your views here.
 def lista_noticias(request):
     noticia = Noticia.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
@@ -23,3 +24,16 @@ def chibchombia(request):
 def negocios(request):
     negocio = Noticia.objects.filter(categoria='NO').order_by('fecha_publicacion')
     return render(request, 'noticias/negocios.html', {'negocio': negocio})
+def noticia_new(request):
+    if request.method == "POST":
+        form = Noticia_Form(request.POST)
+        if form.is_valid():
+            noticia = form.save(commit=False)
+            noticia.author = request.user
+            noticia.published_date = timezone.now()
+            noticia.save()
+            return redirect('post_detail', pk=noticia.pk)
+    else:
+        form = Noticia_Form()
+    return render(request, 'noticias/form.html', {'form': form})
+    

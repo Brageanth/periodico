@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
         url(r'^$', views.lista_noticias,  name='home'),
@@ -9,4 +10,5 @@ urlpatterns = [
         url(r'^orden_publico_alterado', views.orden,  name='orden'),
         url(r'^chibchombia', views.chibchombia,  name='chibchombia'),
         url(r'^negocios_ociosos', views.negocios,  name='negocios'),
+        url(r'^noticia/new/$', login_required( views.noticia_new ), name='noticia_new'),
 ]

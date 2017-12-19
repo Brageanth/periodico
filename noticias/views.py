@@ -37,3 +37,8 @@ def noticia_new(request):
         form = Noticia_Form()
     return render(request, 'noticias/form.html', {'form': form})
     
+class RegistroUsuario(CreateView):
+    model = User
+    template_name = "noticias/registrar.html"
+    form_clase = RegistroFrom
+    success_url = reverse_lazy('noticias:deportes')

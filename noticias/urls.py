@@ -11,4 +11,5 @@ urlpatterns = [
         url(r'^chibchombia', views.chibchombia,  name='chibchombia'),
         url(r'^negocios_ociosos', views.negocios,  name='negocios'),
         url(r'^noticia/new/$', login_required( views.noticia_new ), name='noticia_new'),
+        url(r'^registrar', RegistroUsuario.as_view(), name = "registrar"),
 ]

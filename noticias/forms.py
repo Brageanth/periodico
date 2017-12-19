@@ -22,3 +22,23 @@ class Noticia_Form(forms.ModelForm):
                 'imagen':'Imagen',
                 'categoria':'Categoria',
             }
+            
+class RegistroFrom(UserCreationForm):
+    
+    class Meta:
+        model = User
+        fields = [ 
+                'username',
+                'first_name',
+                'last_name',
+                'email',
+            ]
+        labels = {
+                'username': 'Nombre de Usuario',
+                'first_name': 'Nombre',
+                'last_name': 'Apellidos',
+                'email': 'Correo electronico',
+            }
+        widgets = {
+                'username':forms.TextInput(attrs={'placeholder': 'Nombre de usuario'}),
+            }

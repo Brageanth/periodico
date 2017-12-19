@@ -1,0 +1,15 @@
+{% extends 'noticias/base.html' %} 
+
+{% block content %}
+
+<form method="post">
+
+	{% csrf_token %}
+	{{ form.username }}
+	{{ form.correo }}
+	
+	<button type="submit">Guardar</button>
+	
+</form>
+
+{% endblock %}

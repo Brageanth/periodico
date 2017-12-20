@@ -46,3 +46,4 @@ class RegistroUsuario(CreateView):
     template_name = "noticias/registrar.html"
     form_clase = RegistroFrom
     success_url = reverse_lazy('noticias:deportes')
+    

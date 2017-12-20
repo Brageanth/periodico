@@ -1,5 +1,7 @@
 from django import forms
 from .models import Noticia
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class Noticia_Form(forms.ModelForm):
     
@@ -41,4 +43,8 @@ class RegistroFrom(UserCreationForm):
             }
         widgets = {
                 'username':forms.TextInput(attrs={'placeholder': 'Nombre de usuario'}),
+                'first_name': forms.TextInput(attrs={'placeholder': 'Nombre'}),
+                'last_name': forms.TextInput(attrs={'placeholder': 'Apellidos'}),
+                'email': forms.EmailInput(attrs={'placeholder': 'Correo electronico'}),
+                
             }

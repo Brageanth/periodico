@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.contrib.auth.decorators import login_required
 from noticias.views import RegistroUsuario
+from django.contrib.auth import login
 
 urlpatterns = [
         url(r'^$', views.lista_noticias,  name='home'),
@@ -13,4 +14,5 @@ urlpatterns = [
         url(r'^negocios_ociosos', views.negocios,  name='negocios'),
         url(r'^noticia/new/$', login_required( views.noticia_new ), name='noticia_new'),
         url(r'^registrar', RegistroUsuario.as_view(), name = "registrar"),
+        url(r'^login', login, {'template_name':'index.html'}, name= 'login')
 ]

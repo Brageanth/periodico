@@ -1,6 +1,35 @@
 {% extends 'noticias/base.html' %}
 
 {% block content %}
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+ 		 <!-- The slideshow -->
+		<div class="carousel-inner">
+			{% for notici in noticia %}
+    			<div class="carousel-item active">
+        			<div class="container">
+  						<img src="{{notici.imagen.url}}" alt="Nature" style="width:100%;">
+  						<div class="text-block">
+    						<h4><a href="{% url 'post_detail' pk=notici.pk %}">{{ notici.titulo }}</a><br></h4>
+    						<p>{{ destac.encabezado }}</p>
+  						</div>
+					</div>   			
+    			</div>
+   			{% endfor %}
+  		</div>
+  		<!-- Left and right controls -->
+  		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+    		<span class="carousel-control-prev-icon"></span>
+  		</a>
+  		<a class="carousel-control-next" href="#demo" data-slide="next">
+    		<span class="carousel-control-next-icon"></span>
+  		</a>
+	</div>
     <div class="contNoti">
     {% for notici in noticia %}
         <figure class="content">

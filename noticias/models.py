@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-from idlelib.IOBinding import blank_re
     
 class Noticia(models.Model):
         autor = models.ForeignKey('auth.User')

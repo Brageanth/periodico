@@ -33,7 +33,7 @@
     {% block content %}
     {% endblock %}
     {% block boton %}
-    	<a href="{% url 'noticia_new' %}" class="top-menu">nueva noticia</a>
+    	<a href="{% url 'noticia_new' %}" class="top-menu" id="boton_nuevo"><img id="imgBoton" alt="Publicar" src="{% static 'img/BOTON PUBLICAR.png' %}"></a>
    	{% endblock %}
     <script type="text/javascript">
         function myFunction() 

@@ -72,6 +72,7 @@ figcaption
 span
 {
   font-size: 70%;
+  width: 100%;
 }
 .contNoti
 {
@@ -104,21 +105,25 @@ h1
  /* Add a black background color to the top navigation */
 .topnav 
 {
-    background-color: #333;
     overflow: hidden;
     margin-bottom: 2%;
+    width: 100%;
+    opacity: 0.9;
+    padding: .5%;
+    background: black;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a 
+.topnav>a 
 {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 1% 2.52%;
+    padding: .5% 2.7%;
     text-decoration: none;
     font-size: 100%;
+    background-image: url("../img/fondo barra.png");
 }
 
 /* Change the color of links on hover */
@@ -175,4 +180,35 @@ h1
 {
   font-size: 80%;
   margin-left: 3%;
+}
+#boton_nuevo
+{
+	position: fixed;
+	bottom: 4%;
+	left: 43.1%;
+	background: transparent;
+}
+#imgBoton
+{
+	width: 90%;
+	transition: .3s;
+}
+#imgBoton:hover
+{
+	width: 95%;
+}
+.container 
+{
+    position: relative;
+    font-family: Arial;
+}
+.text-block 
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
 }

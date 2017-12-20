@@ -2,6 +2,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Noticia
 from .forms import Noticia_Form
+from django.views.generic.edit import CreateView
+from django.contrib.auth.models import User
+from noticias.forms import RegistroFrom
+from django.core.urlresolvers import reverse_lazy
 # Create your views here.
 def lista_noticias(request):
     noticia = Noticia.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')

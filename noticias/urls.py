@@ -12,5 +12,5 @@ urlpatterns = [
         url(r'^chibchombia', views.chibchombia,  name='chibchombia'),
         url(r'^negocios_ociosos', views.negocios,  name='negocios'),
         url(r'^noticia/new/$', login_required( views.noticia_new ), name='noticia_new'),
-        url(r'^accounts/login/', login, {'template_name':'usuarios/index.html'}, name='login')
+        url(r'^accounts/login/', login, {'template_name':'usuarios/index.html'}, name='login'),
 ]

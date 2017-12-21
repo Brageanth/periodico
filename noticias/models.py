@@ -30,7 +30,7 @@ class Noticia(models.Model):
             choices=CATEGORIAS,
             default=SELECCION,
         )
-        destacado = models.BooleanField( blank=True)
+        destacado = models.NullBooleanField()
         
         def publish(self):
                 self.fecha_publicacion = timezone.now()
@@ -38,3 +38,6 @@ class Noticia(models.Model):
     
         def __str__(self):
                 return self.titulo
+        
+        def __unicode__(self,):
+            return str(self.imagen)

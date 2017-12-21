@@ -6,9 +6,9 @@ class Noticia_Form(forms.ModelForm):
     class Meta:
         model=Noticia
         fields = [
+                'texto',
                 'titulo',
                 'encabezado',
-                'texto',
                 'imagen',
                 'categoria',
             ]
@@ -16,9 +16,15 @@ class Noticia_Form(forms.ModelForm):
         # Este es el arreglo con las etiquetas para cada uno de los campos que
         # usaremos
         labels = {
-                'titulo':'Titulo',
-                'encabezado':'Encabezado',
-                'texto':'Texto',
+                'texto':'',
+                'titulo':'',
+                'encabezado':'',
                 'imagen':'Imagen',
-                'categoria':'Categoria',
+                'categoria':'',
+            }
+        
+        widgets = {
+                'texto' : forms.Textarea(attrs={'placeholder': 'TEXTO'}),
+                'titulo' : forms.TextInput(attrs={'placeholder': 'TITULO'}),
+                'encabezado' : forms.TextInput(attrs={'placeholder': 'Encabezado'}),
             }

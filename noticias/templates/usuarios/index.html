@@ -4,11 +4,16 @@
 {% endblock%}
 {% block content %}
 
-<form method="post">
+<form method="post" id="inicioForm">
 
 	{% csrf_token %}
-	{{ form.as_p }}
-	<button type="submit">Guardar</button>
+	{{ form.username.errors }}<br>
+	<label id="labelUser">Nombre de usuario</label><br>
+	{{ form.username }}<br>
+	{{ form.password.errors }}<br>
+	<label id="labelPassword">Contraseña</label><br>
+	{{ form.password }}<br>
+	<button type="submit" id="botonSesion"></button><br>
 	<a href="{% url 'usuario:registrar' %}">registrarse</a>
 </form>
 

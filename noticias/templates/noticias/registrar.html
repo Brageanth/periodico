@@ -1,54 +1,49 @@
 {% extends 'noticias/base.html' %}
-
+{% block navbar %}
+{% endblock %}
 {% block content %}
-<form method="post">
+<form method="post" id="registrarForm">
 	{% csrf_token %}
 	
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label>Nombre</label>
-				<input class="form-control" type="text" name="first_name">
+				<input class="form-control" type="text" name="first_name" placeholder="Nombre">
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label >Apellidos</label>
-				<input class="form-control" type="text" name="last_name">
+				<input class="form-control" type="text" name="last_name" placeholder="Apellido">
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label >Nombre de usuario</label>
-				<input class="form-control" type="text" name="username">
+				<input class="form-control" type="text" name="username" placeholder="Nombre de usuario">
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label >Correo</label>
-				<input class="form-control" type="text" name="email">
+				<input class="form-control" type="text" name="email" placeholder="Correo">
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label >Contraseña</label>
-				<input class="form-control" type="password" name="password1">
+				<input class="form-control" type="password" name="password1" placeholder="Contraseña">
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<label >Confirmar contraseña</label>
-				<input class="form-control" type="password" name="password2">
+				<input class="form-control" type="password" name="password2" placeholder="Confirmar contraseña">
 			</div>
 		</div>
 	</div>
@@ -56,10 +51,12 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
-				<button class="btn btn-primary "type="submit">Guardar</button>
+				<button class="btn btn-primary" type="submit" id="botonRegistrar"></button>
 			</div>
 		</div>
 	</div>
 	
 </form>
+{% endblock %}
+{% block boton %}
 {% endblock %}

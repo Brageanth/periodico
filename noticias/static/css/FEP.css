@@ -120,7 +120,7 @@ h1
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: .5% 2.7%;
+    padding: .5% 2.6%;
     text-decoration: none;
     font-size: 100%;
     background-image: url("../img/fondo barra.png");
@@ -136,7 +136,6 @@ h1
 /* Add an active class to highlight the current page */
 .active 
 {
-    background-color: #4CAF50;
     color: white;
 }
 
@@ -201,6 +200,8 @@ h1
 {
     position: relative;
     font-family: Arial;
+    width: 90%;
+    height: 68%;
 }
 .text-block 
 {
@@ -211,4 +212,181 @@ h1
     color: white;
     padding-left: 20px;
     padding-right: 20px;
+}
+.carousel-control-prev, .carousel-control-next
+{
+	background: transparent;
+}
+.carousel-control-prev
+{
+	left: -6%;
+}
+.carousel-control-next
+{
+	right: -6%;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon
+{
+	width: 20%;
+	height: 20%;
+	background: transparent;
+}
+#demo
+{
+	margin-bottom: 2.5%;
+}
+#registrarForm
+{
+	margin-left: 41%;
+	width: 30%;
+}
+input
+{
+	border-radius: 0 !important;
+	border: solid 1px black !important;
+	padding: 1% 2% !important;
+}
+#botonRegistrar
+{
+	background: url("../img/BOTON REGISTRARSE.png") no-repeat;
+	background-size: 100%;
+	width: 50%;
+	height: 90%;
+	border: transparent;
+	border-radius: 0;
+	margin-left: 23%;
+	margin-top: 15%;
+}
+p
+{
+	display: inline;
+}
+#id_texto
+{
+	width: 60%;
+	height: 65%;
+	background: url("../img/fondo barra.png");
+	background-size: 600% 100%;
+	background-color: black;
+	opacity: .7;
+	color: white;
+	padding: 1% 2%;
+	font-size: 350%;
+	border: transparent;
+}
+#id_titulo
+{
+	position: absolute;
+	top: 38.5%;
+	margin-left: .5%;
+	width: 35%;
+	background: url("../img/fondo barra.png");
+	background-size: 600% 100%;
+	background-color: black;
+	opacity: .7;
+	color: white;	
+	font-size: 300%;
+	border: transparent;
+}
+#id_encabezado
+{
+	position: absolute;
+	top: 55%;
+	margin-left: .5%;
+	width: 35%;
+	background: url("../img/fondo barra.png");
+	background-size: 600% 100%;
+	background-color: black;
+	opacity: .7;
+	color: white;	
+	font-size: 300%;
+	border: transparent;
+}
+#id_imagen
+{
+	position: absolute;
+	top: 75.5%;
+	margin-left: .5%;
+	width: 35%;
+	background: url("../img/fondo barra.png");
+	background-size: 600% 100%;
+	background-color: black;
+	opacity: .7;
+	color: white;	
+	font-size: 110%;
+	border: transparent;
+	padding: 0;
+}
+label[for=id_imagen]
+{
+	position: absolute;
+	top: 71%;
+	margin-left: .5%;
+	width: 35%;
+	background-size: 600% 100%;
+	opacity: .7;
+	color: white;	
+	font-size: 110%;
+	border: transparent;
+}
+#id_categoria
+{
+	position: absolute;
+	top: 85.5%;
+	margin-left: .5%;
+	width: 35%;
+	background: url("../img/fondo barra.png");
+	background-size: 600% 100%;
+	background-color: black;
+	opacity: .7;
+	color: white;	
+	font-size: 100%;
+	border: transparent;
+	padding: .5%;
+}
+#botonNoticiasNueva
+{
+	background: url("../img/BOTON PUBLICAR.png") no-repeat;
+	background-size: 100%;
+	border-radius: 0 !important;
+	width: 10%;
+	height: 10%;
+	margin-left: 29.5%;
+	margin-top: 2%;
+}
+#inicioForm
+{
+	margin-left: 41.5%;
+}
+#labelUser
+{
+	color: white;
+	font-weight: bold;
+	margin-left: 5%;
+}
+#labelPassword
+{
+	color: white;
+	font-weight: bold;
+	margin-left: 8.5%;
+}
+#id_username, #id_password
+{
+	background: url("../img/barra registro.png") no-repeat;
+	background-size: 100%;
+	height: 4.9%;
+	opacity: 0.9;
+}
+#id_password
+{
+	margin-bottom: 10%; 
+}
+#botonSesion
+{
+	margin-left: 7.5%;
+	background: url("../img/boton entrar.png");
+	width: 15%;
+	background-size: 100%;
+	height: 4.8%;
+	border: transparent;
 }

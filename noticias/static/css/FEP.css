@@ -48,9 +48,7 @@ body
 .imgPost
 {
   width: 100%;
-  height: 100%;
-  z-index: 0;
-  
+  display: inline; 
 }
 
 figcaption, a
@@ -76,7 +74,7 @@ span
 }
 .contNoti
 {
-  
+  margin-left: 4%;
 }
 .post
 {
@@ -426,4 +424,66 @@ label[for=id_email]
 	background: white;
 	padding: 2%;
 	opacity: .8;
+}
+#id_new_password1
+{
+	margin-left: 4%;
+	margin-bottom: 2%;
+}
+#id_new_password2
+{
+	margin-left: 1%;
+	margin-bottom: 2%;
+}
+#botonCambio
+{
+	width: 33.5%;
+}
+#textFinal
+{
+	width: 75%;
+	font-family: BaseTwelveSans;
+	color: black;
+	margin-left: 12%;
+	margin-top: 10%;
+	background: white;
+	padding: 2%;
+	opacity: .8;	
+}
+.containerUno
+{
+	height: 50%;
+	width: 40%;
+	align-items: center;
+	overflow: hidden;
+	display: inline-block;
+}
+.containerDos
+{
+	align-items: center;
+	overflow: hidden;
+	background: url("../img/cuadro texto noticias.png");
+	margin: 2%;
+	padding: 1%;
+	width: 36%;
+	display: inline-block;
+}
+.caja
+{
+	display: inline;
+	width: 48%;
+}
+h4[class=caja]
+{
+	display: inline;
+}
+a[class=caja]
+{
+	background: transparent;
+	color: black;
+	font-style: normal;
+}
+p[class=caja]
+{
+	display: inline;
 }

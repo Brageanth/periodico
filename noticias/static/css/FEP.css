@@ -64,6 +64,10 @@ a
   font-weight: bold;
   font-style: italic;
 }
+a:hover
+{
+	color: white;
+}
 figcaption
 {
   padding:1%;
@@ -256,6 +260,12 @@ input
 	border-radius: 0;
 	margin-left: 23%;
 	margin-top: 15%;
+	cursor: pointer;
+	transition: .3s;
+}
+#botonRegistrar:hover
+{
+	width: 55%;
 }
 p
 {
@@ -351,8 +361,14 @@ label[for=id_imagen]
 	border-radius: 0 !important;
 	width: 10%;
 	height: 10%;
-	margin-left: 29.5%;
+	margin-left: 28.5%;
 	margin-top: 2%;
+	cursor: pointer;
+	transition: .3s;
+}
+#botonNoticiasNueva:hover
+{
+	width: 11%;
 }
 #inicioForm
 {

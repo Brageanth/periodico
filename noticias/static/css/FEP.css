@@ -251,11 +251,12 @@ input
 	background: url("../img/BOTON REGISTRARSE.png") no-repeat;
 	background-size: 100%;
 	width: 50%;
-	height: 90%;
+	height: 39%;
 	border: transparent;
 	border-radius: 0;
 	margin-left: 23%;
 	margin-top: 15%;
+	cursor: pointer;
 }
 p
 {
@@ -384,9 +385,45 @@ label[for=id_imagen]
 #botonSesion
 {
 	margin-left: 7.5%;
-	background: url("../img/boton entrar.png");
+	background: url("../img/boton entrar.png") no-repeat;
 	width: 15%;
 	background-size: 100%;
 	height: 4.8%;
 	border: transparent;
+	cursor: pointer;
+	transition: .3s; 
+}
+#botonSesion:hover 
+{
+	width: 16%;	
+}
+.link
+{
+	background: transparent;
+	color: black;
+	font-style: normal;
+	font-weight: bold;
+}
+#linkOlvidar
+{
+	margin-left: 41%;
+}
+#linkRegistrar
+{
+	margin-left: 46.4%;
+}
+label[for=id_email]
+{
+	font-size: 190%;
+}
+#textRest
+{
+	width: 75%;
+	font-family: BaseTwelveSans;
+	color: black;
+	margin-left: 12%;
+	margin-top: 10%;
+	background: white;
+	padding: 2%;
+	opacity: .8;
 }

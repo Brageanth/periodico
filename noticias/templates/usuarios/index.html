@@ -14,9 +14,9 @@
 	<label id="labelPassword">Contraseña</label><br>
 	{{ form.password }}<br>
 	<button type="submit" id="botonSesion"></button><br>
-	<a href="{% url 'usuario:registrar' %}">registrarse</a>
 </form>
-
+<a href="{% url 'password_reset' %}" class="link" id="linkOlvidar">¿Has olvidado tu contraseña?</a><br>
+<a href="{% url 'usuario:registrar' %}" class="link" id="linkRegistrar">Registrarse</a>
 {% endblock %}
 {% block boton%}
 {% endblock %}

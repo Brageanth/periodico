@@ -38,13 +38,17 @@
 	</div>
     <div class="contNoti">
     {% for notici in noticia %}
-        <figure class="containerUno">
-			<img src="{{notici.imagen.url}}" class="imgPost">
-  		</figure>
-  		<figcaption class="containerDos">
-    		<h4 class="caja"><a href="{% url 'post_detail' pk=notici.pk %}" class="caja">{{ notici.titulo }}</a><br></h4>
-			<p class="caja">{{ notici.encabezado }}</p>
-		</figcaption>
+    <div class="linea">
+        <figure class="content">
+        	<div class="containerUno">
+        	    <img class="imgPost" src="{{notici.imagen.url}}">
+			</div>
+            <figcaption>
+                <a href="{% url 'post_detail' pk=notici.pk %}" class="linkTi">{{ notici.titulo }}</a><br>
+                <div class="spanFig">{{ notici.encabezado }}</div>
+            </figcaption>
+		</figure>
+	</div>
     {% endfor %}
     </div>
 {% endblock %}

@@ -1,6 +1,9 @@
 {% extends 'noticias/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
+	<div align="right" id="cerrarS">
+		<a href="{% url 'usuario:salira' %}"><img src="{% static 'img/CERRAR SESION.png'%}"></a>
+	</div>
 	{% csrf_token %}
 	<form method="POST" class="post-form"  enctype="multipart/form-data">{% csrf_token %}
 		{{ form.as_p }}

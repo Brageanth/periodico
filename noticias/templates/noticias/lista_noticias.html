@@ -16,13 +16,13 @@
   					<img src="{% static 'img/activo.png'%}" alt="Nature" style="width:100%;">
 				</div>   			
     		</div>
-			{% for notici in noticia %}
+			{% for des in destaca %}
     			<div class="carousel-item">
         			<div class="container">
-  						<img src="{{notici.imagen.url}}" alt="Nature" style="width:100%;">
+  						<img src="{{des.imagen.url}}" alt="Nature" style="width:100%;">
   						<div class="text-block">
-    						<h4><a href="{% url 'post_detail' pk=notici.pk %}">{{ notici.titulo }}</a><br></h4>
-    						<p>{{ destac.encabezado }}</p>
+    						<h4><a href="{% url 'post_detail' pk=des.pk %}">{{ des.titulo }}</a><br></h4>
+    						<p>{{ notici.encabezado }}</p>
   						</div>
 					</div>   			
     			</div>
@@ -45,7 +45,7 @@
 			</div>
             <figcaption>
                 <a href="{% url 'post_detail' pk=notici.pk %}" class="linkTi">{{ notici.titulo }}</a><br>
-                <div class="spanFig">{{ notici.encabezado }}</div>
+                <p class="spanFig">{{ notici.encabezado }}</p>
             </figcaption>
 		</figure>
 	</div>

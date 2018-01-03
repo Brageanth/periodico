@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from usuario.views import RegistroUsuario
-from django.contrib.auth import logout
+from django.contrib.auth.views import logout
 
 urlpatterns = [
     url(r'^$', RegistroUsuario.as_view(), name="registrar"),

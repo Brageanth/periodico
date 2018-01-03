@@ -61,7 +61,7 @@ figcaption
 }
 .spanFig
 {
-	width: 50%;
+	width: 10%;
 }
 .linkTi
 {
@@ -374,7 +374,7 @@ label[for=id_imagen]
 	width: 10%;
 	height: 10%;
 	margin-left: 28.5%;
-	margin-top: 2%;
+	margin-bottom: -1%;
 	cursor: pointer;
 	transition: .3s;
 }
@@ -506,4 +506,19 @@ a[class=caja]
 .linea
 {
 	display: inline;
+}
+#trebol
+{
+	position: fixed;
+	right: 2%;
+	bottom: 3%;
+	width: 8%;
+	opacity: .6;
+	z-index: -1000000;
+}
+#cerrarS
+{
+	position: fixed;
+	top: 5%;
+	right: 5%;
 }

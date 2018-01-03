@@ -41,3 +41,10 @@ class Noticia(models.Model):
         
         def __unicode__(self,):
             return str(self.imagen)
+        
+        def estaLoguado(self):
+            try:
+                self.autor
+                return True
+            except:
+                return False

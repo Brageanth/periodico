@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="{% static 'css/FEP.css' %}"> 
 </head>
 <body>
-	<div>
-		<a href="{% url 'usuario:salir' %}"><img src="../img/CERRAR SESION.png"></a>
-	</div>
     <div align="center">
        <a id="aLogo" href="{% url 'home' %}"><img src="http://presskit.paramopresenta.com/images/Recurso 1-8.png" id="logo"/></a> 
     </div>
@@ -35,6 +32,7 @@
     {% endblock %}
     {% block content %}
     {% endblock %}
+    <img alt="" src="{% static 'img/TREBOL1.png' %}" id="trebol">
     {% block boton %}
     	<a href="{% url 'noticia_new' %}" class="top-menu" id="boton_nuevo"><img id="imgBoton" alt="Publicar" src="{% static 'img/BOTON PUBLICAR.png' %}"></a>
    	{% endblock %}

@@ -3,13 +3,17 @@
 {% block content %}
     <div class="contNoti">
     {% for notici in negocio %}
+        <div class="linea">
         <figure class="content">
-            <img class="imgPost" src="{{notici.imagen.url}}">
+        	<div class="containerUno">
+        	    <img class="imgPost" src="{{notici.imagen.url}}">
+			</div>
             <figcaption>
-                <a href="{% url 'post_detail' pk=notici.pk %}">{{ notici.titulo }}</a><br>
-                <span>{{ notici.encabezado }}</span>
+                <a href="{% url 'post_detail' pk=notici.pk %}" class="linkTi">{{ notici.titulo }}</a><br>
+                <div class="spanFig">{{ notici.encabezado }}</div>
             </figcaption>
-        </figure>
+		</figure>
+	</div>
     {% endfor %}
     </div>
 {% endblock %}

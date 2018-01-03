@@ -2,14 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Noticia
 from .forms import Noticia_Form
-from django.contrib.auth.decorators import login_required
 # Create your views here.
 def lista_noticias(request):
     noticia = Noticia.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
-    return render(request, 'noticias/lista_noticias.html', {'noticia': noticia})
-def lista_noticias_destacadas(request):
-    destaca = Noticia.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
-    return render(request, 'noticias/lista_noticias.html', {'destaca': destaca})
+    destaca = Noticia.objects.filter(destacado=True)
+    return render(request, 'noticias/lista_noticias.html', {'noticia': noticia, 'destaca':destaca})
 def post_detail(request, pk):
     post = get_object_or_404(Noticia, pk=pk)
     return render(request, 'noticias/post_detail.html', {'post': post})

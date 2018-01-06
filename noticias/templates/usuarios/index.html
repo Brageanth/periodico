@@ -15,6 +15,7 @@
 	{{ form.password }}<br>
 	<button type="submit" id="botonSesion"></button><br>
 </form>
+<a href="{% url 'social:begin' 'facebook' %}" class="link" id="ISFacebook">Iniciar sesion con Facebook</a>
 <a href="{% url 'password_reset' %}" class="link" id="linkOlvidar">¿Has olvidado tu contraseña?</a><br>
 <a href="{% url 'usuario:registrar' %}" class="link" id="linkRegistrar">Registrarse</a>
 {% endblock %}

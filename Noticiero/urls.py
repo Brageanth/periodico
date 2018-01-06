@@ -19,4 +19,5 @@ urlpatterns = [
         url(r'^reset/password_reset_complete', password_reset_complete, {'template_name':'Reset/password_final.html'}, name='password_reset_complete'),
         url(r'^usuario/', include('usuario.urls', namespace='usuario')),
         url(r'', include('noticias.urls', namespace='noticias')),
+        url(r'^oauth/', include('social_django.urls', namespace='social')),
 ]

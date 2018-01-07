@@ -3,7 +3,14 @@
 {% block navbar %}
 {% endblock%}
 {% block content %}
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.11&appId=1928794197449627';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <form method="post" id="inicioForm">
 
 	{% csrf_token %}
@@ -15,6 +22,7 @@
 	{{ form.password }}<br>
 	<button type="submit" id="botonSesion"></button><br>
 </form>
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
 <a href="{% url 'social:begin' 'facebook' %}" class="link" id="ISFacebook">Iniciar sesion con Facebook</a>
 <a href="{% url 'password_reset' %}" class="link" id="linkOlvidar">¿Has olvidado tu contraseña?</a><br>
 <a href="{% url 'usuario:registrar' %}" class="link" id="linkRegistrar">Registrarse</a>
